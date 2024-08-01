@@ -1,18 +1,21 @@
 import { View, Text, StyleSheet, SafeAreaView, TextInput, } from 'react-native'
 import React, { useState } from 'react'
 import CustomButton from '../../components/CustomButton';
+import FormField from '../../components/FormField';
 
-
-// import { text } from 'body-parser';
 const Reports = () => {
   const onPressCancel =() => {
-    alert("Button has been pressed")
+    alert("Canceled")
   }
   const onPressPost =() => {
-    alert("Posted!")
+    alert("Thank you for the report!")
   }
     const [text, onChangeTrain] = useState('Train Line');
+    const [textWrite, onChangeWrite] = useState('What would you like to report ?')
     const [number, onChangeTrainSerial] = useState('Train Serial #');
+    const [form, setForm] = useState({
+      problem: '',
+    })
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Report a Problem</Text>
@@ -23,7 +26,12 @@ const Reports = () => {
       <View style={styles.containerNotepad}>
         <View style={styles.notepad}></View>
           <View style={styles.containerWrite}>
-            <View style={styles.write}></View>
+            <View style={styles.write}>
+              <FormField
+                value={form.problem}
+                handleChangeText={(e) => setForm({ ...form, problem: e })}
+              />
+            </View>
           </View>
           <View style={styles.inputContainer}> 
             <TextInput
@@ -41,29 +49,19 @@ const Reports = () => {
       </View>
     </View>
 
-    // <View style={styles.container}>
-    //   <Text style={styles.header}> Report a Problem </Text>
-    //   <View style={styles.subContainer}>
-
-    //   </View>
-    // </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#1B5669",
-    // justifyContent: 'center',
-    alignItems: 'center',
-    // backgroundColor: '#204E5D',
-    // lineHeight: 10, 
-    // alignItems: 'center',
+    backgroundColor: "#1E1E1E",
+
   },
   containerButton: {
-    flexDirection: "row", 
+    flexDirection: "row",
     justifyContent: "space-between",
-    bottom: -630,
+    bottom: -550,
   },
   containerNotepad: {
     alignItems: 'center',
@@ -85,7 +83,7 @@ const styles = StyleSheet.create({
     fontStyle: "normal",
     fontWeight: 400,
     textShadowColor: 'rgba(0, 0, 0, 0.25)',
-    textShadowOffset: { width: 0, height: 4 },
+    textShadowOffset: { width: 0, height: 8 },
     textShadowRadius: 4,
     marginTop: 90,
     textAlign: "center",
@@ -104,18 +102,35 @@ const styles = StyleSheet.create({
     height: 411,
     backgroundColor: '#398097',
     alignItems: "center",
+    borderRadius: 20,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 5 },
+    shadowOpacity: 0.5,
+    shadowRadius: 5,
   },
   write:{
-    width: 358,
-    height: 146,
+    width: 350,
+    height: 200,
     backgroundColor: "#f4fcff",
     alignItems: "center",
+    borderRadius: 11,
+    shadowColor: "000",
+    shadowOffset: { width: 0, height: 5 },
+    shadowOpacity: 0.5,
+    shadowRadius: 5
   },
   input: {
     height: 47,
     margin: 12,
-    borderWidth: 3,
+    borderWidth: 1,
     padding: 10,
+    backgroundColor: '#F7B655',
+    paddingVertical: 12,
+    paddingHorizontal: 24,
+    borderRadius: 16,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginVertical: -110,
   },
   inputContainer: {
     flexDirection: 'row',

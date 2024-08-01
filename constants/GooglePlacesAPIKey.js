@@ -1,0 +1,1 @@
+export const GOOGLE_PLACES_API_KEY = 'AIzaSyBMxnnaLtXTmNd8PdqR7oYHJ1nw4d8G62o';

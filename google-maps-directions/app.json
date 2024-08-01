@@ -1,21 +1,19 @@
 {
   "expo": {
-    "name": "soter",
-    "slug": "soter",
+    "name": "google-maps-directions",
+    "slug": "google-maps-directions",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
-    "splash": { 
-      "image": "./assets/images/Splash.png",
+    "splash": {
+      "image": "./assets/images/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#000000"
-      
+      "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true,
-      "ios.config.googleMapApiKey": "AIzaSyBMxnnaLtXTmNd8PdqR7oYHJ1nw4d8G62o"
+      "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {

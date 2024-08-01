@@ -14,8 +14,6 @@ const CustomButton = ({ title, onPress, buttonStyle, textStyle }) => {
       paddingVertical: 12,
       paddingHorizontal: 24,
       borderRadius: 16,
-      alignItems: 'center',
-      justifyContent: 'center',
       marginVertical: 10,
     },
     text: {

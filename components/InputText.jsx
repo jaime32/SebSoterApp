@@ -15,13 +15,12 @@ const TextInputExample = () => {
         style={styles.input}
         onChangeText={onChangeNumber}
         value={number}
-        placeholder="Bus Serial Number"
+        placeholder="Train Line"
         keyboardType="numeric"
       />
     </SafeAreaView>
   );
 };
-
 const styles = StyleSheet.create({
   input: {
     height: 40,
