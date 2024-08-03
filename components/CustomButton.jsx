@@ -20,6 +20,7 @@ const CustomButton = ({ title, onPress, buttonStyle, textStyle }) => {
       color: '#fff', // Default text color
       fontSize: 18,
       fontWeight: 'bold',
+      textAlign: 'center'
     },
   });
   

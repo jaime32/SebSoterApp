@@ -83,7 +83,7 @@ const styles = StyleSheet.create ({
         color: '#2DAE4A',
         fontSize: 24,
         textAlign: 'center',
-        // fontWeight: 700,
+        // fontWeight: '700',
     
     },
 

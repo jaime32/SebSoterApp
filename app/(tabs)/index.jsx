@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
     textAlign: "top",
     fontSize: 52,
     fontStyle: "normal",
-    fontWeight: 400,
+    fontWeight: '400',
     textShadowColor: 'rgba(0, 0, 0, 0.25)',
     textShadowOffset: { width: 0, height: 8 },
     textShadowRadius: 4,
